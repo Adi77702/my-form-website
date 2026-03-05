@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trading Registration Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right,#1f4037,#99f2c8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.form-box{
+    background:#ffffff;
+    padding:30px;
+    width:350px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+input, select{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#28a745;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#218838;
+}
+
+.social-links{
+    text-align:center;
+    margin-top:15px;
+}
+
+.social-links a{
+    text-decoration:none;
+    margin:0 10px;
+    color:#007bff;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="form-box">
+<h2>Trading Registration</h2>
+
+<form onsubmit="redirectToWhatsApp(); return false;">
+
+<input type="text" id="name" placeholder="Full Name" required>
+<input type="tel" id="phone" placeholder="Mobile Number" required>
+<input type="email" id="email" placeholder="Email Address" required>
+
+<select id="interest" required>
+<option value="">Select Interest</option>
+<option>Crypto</option>
+<option>Forex</option>
+<option>Both</option>
+</select>
+
+<button type="submit">Submit Now</button>
+
+</form>
+
+<div class="social-links">
+<a href="https://www.instagram.com/tradingspheresofficial/">Instagram</a>
+<a href="https://wa.me/9464807614" target="_blank">WhatsApp</a>
+</div>
+
+</div>
+
+<script>
+function redirectToWhatsApp(){
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var email = document.getElementById("email").value;
+    var interest = document.getElementById("interest").value;
+
+    var message = "New Registration:%0AName: "+name+
+                  "%0APhone: "+phone+
+                  "%0AEmail: "+email+
+                  "%0AInterest: "+interest;
+
+    window.location.href = "https://wa.me/9464807614?text=" + message;
+}
+</script>
+
+</body>
+</html>
+<script>
+
+function sendWhatsapp(){
+
+var name = document.getElementById("name").value;
+var phone = document.getElementById("phone").value;
+var email = document.getElementById("email").value;
+
+var message = "New Lead:%0A"
++ "Name: " + name + "%0A"
++ "Phone: " + phone + "%0A"
++ "Email: " + email;
+
+window.location.href = "https://wa.me/919812345678?text=" + message;
+
+}
+
+</script>
